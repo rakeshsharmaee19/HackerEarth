@@ -1,0 +1,16 @@
+n,c=int(input()),0 
+a=list(map(int,input().split())) 
+b=list(map(int,input().split())) 
+def check(a,b,n,c):     
+    minm=min(a)     
+    for i in range(n):         
+        if a[i]<0:             
+            return -1         
+        else:             
+            while a[i]>minm:                     
+                a[i]-=b[i]                     
+                c+=1                     
+                if a[i]<minm:                         
+                    return check(a,b,n,c)     
+    return(c) 
+print(check(a,b,n,c))
