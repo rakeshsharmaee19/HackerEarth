@@ -11,6 +11,7 @@ for _ in range(int(input())):
                 res[2].append(i)
         else:
             res[1].append(i)
+            
     while len(res[2])<n and res[4]:
         nm = res[1].pop()
         mmf = res[4].pop()
